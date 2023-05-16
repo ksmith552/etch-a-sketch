@@ -1,6 +1,23 @@
 // grid-container styling
 
-// create grid template 16x16 using flexbox - 16 divs with 16 children eachg
+const grid = document.getElementById('grid');
+
+// controls
+const controls = document.querySelector('#controls');
+const gridButton = document.createElement('button');
+gridButton.classList.add('buttons');
+gridButton.innerText = 'Select Grid Size';
+controls.appendChild(gridButton);
+
+const resetButton = document.createElement('button');
+resetButton.classList.add('buttons');
+resetButton.innerText = 'Reset SketchPad';
+controls.appendChild(resetButton);
+
+const colorButton = document.createElement('button');
+colorButton.classList.add('buttons');
+colorButton.innerText = 'Choose Color';
+controls.appendChild(colorButton);
 
 // create an event listener on all divs for hover that calls the drawing function. possible array?
 
