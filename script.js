@@ -4,7 +4,7 @@
  * This function calls createGridRow() 16 times, creating the full grid
  */
 function createGrid() {
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 25; i++) {
     createGridRow();
   }
 }
@@ -18,11 +18,11 @@ function createGridRow() {
 
   grid.appendChild(parentRow);
 
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 25; i++) {
     const rowChildren = document.createElement('div');
     rowChildren.classList.add('row-children');
     rowChildren.style.borderStyle = 'double';
-    rowChildren.innerText = 'hello';
+
     parentRow.appendChild(rowChildren);
     rowChildren.addEventListener('mouseover', function(event) {
       rowChildren.style.backgroundColor = 'black';
