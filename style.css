@@ -1,6 +1,12 @@
 #grid {
-  margin-left: 10px;
-  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 960px;
+  min-height: 960px;
+  max-height: 960px;
+  max-width: 960px;
+  border-style: solid;
+  margin: auto;
 }
 
 #controls {
@@ -12,12 +18,12 @@
 .parent-row {
   display: flex;
   justify-content: center;
-  min-height: 5.5vh;
+  flex-grow: 1;
 }
 
 .row-children {
   display: flex;
-  width: 5.5vh;
+  flex-grow: 1;
 }
 
 .buttons {
