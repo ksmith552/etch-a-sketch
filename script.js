@@ -21,7 +21,7 @@ function createGridRow() {
   grid.appendChild(parentRow); // / this function is hugggee. make this better
   for (let i = 0; i < gridSelection || i < gridDefault; i++) {
     const rowChildren = document.createElement('div');
-    rowChildren.classLBist.add('row-children');
+    rowChildren.classList.add('row-children');
     rowChildren.style.borderStyle = 'double';
     parentRow.appendChild(rowChildren);
     rowChildren.addEventListener('mouseover', function(event) {
