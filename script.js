@@ -18,17 +18,19 @@ function createGrid() {
 function createGridRow() {
   const parentRow = document.createElement('div');
   parentRow.classList.add('parent-row');
-
   grid.appendChild(parentRow); // / this function is hugggee. make this better
-
   for (let i = 0; i < gridSelection || i < gridDefault; i++) {
     const rowChildren = document.createElement('div');
-    rowChildren.classList.add('row-children');
+    rowChildren.classLBist.add('row-children');
     rowChildren.style.borderStyle = 'double';
-
     parentRow.appendChild(rowChildren);
     rowChildren.addEventListener('mouseover', function(event) {
-      rowChildren.style.backgroundColor = 'black';
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      rowChildren.style.backgroundColor = color;
     });
   }
 }
@@ -47,11 +49,11 @@ function gridSize() {
   grid.replaceChildren();
   if (gridSelection <= 100) {
     // 16 grid squares minimum, fix this
-    // add any input that is not an integer of 1-100 as null/undefined
+    // add any input that is not an integer of 16-100 as null/undefined
     createGrid(gridSelection);
   } else {
     createGrid(gridDefault);
-    alert('Error, please input a valid number in between 1-100');
+    alert('Error, please input a valid number in between 16-100');
   }
 }
 // create a function that will prompt user input for a grid size selection *100 limit*
